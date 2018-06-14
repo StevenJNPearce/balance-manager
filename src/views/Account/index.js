@@ -82,11 +82,6 @@ class Account extends Component {
   openExchangeModal = () => this.props.modalOpen('EXCHANGE_MODAL');
   openSendModal = () => this.props.modalOpen('SEND_MODAL');
   openReceiveModal = () => this.props.modalOpen('RECEIVE_MODAL');
-  componentDidUpdate() {
-    if (this.props.hasPendingTransaction) {
-      this.props.history.push(`${this.props.match.url}/transactions`);
-    }
-  }
   render() {
     return (
       <StyledAccount>
